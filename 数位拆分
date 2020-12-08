@@ -1,0 +1,29 @@
+
+#include<stdio.h>
+ 
+int main(){
+    //4位正整数拆分后加减乘除取余
+    int num = 0;
+    int a = 0;    
+    int b = 0;
+ 
+    printf("please input an int number\n");
+    scanf("%d",&num);
+ 
+    a = num / 100;    //前两位，eg：4321/100=43  整数除法向下取整
+    b = num % 100;    //后两位，eg：4321%100=21
+ 
+    printf("a+b = %d\n",a+b);
+    printf("a-b = %d\n",a-b);
+    printf("a*b = %d\n",a*b);
+    if(b != 0){
+        printf("a/b = %.2f\n",(float)(a/b));    //int强转为float，精确到小数点后两位
+    }
+    else{
+        printf("the second operater is zero!\n");
+    }
+    printf("a%%b = %d\n",a%b);
+ 
+    return 0;
+ 
+}
